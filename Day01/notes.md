@@ -5,6 +5,7 @@
 
 ## Commands I learned
 [Note: Commands in linux are case sensitive]
+```bash
 $ whoami = displays user
 $ id = displays identity info
 $ id -un = displays username
@@ -134,6 +135,7 @@ $ ps = displays currently running programs
   ps -o pid,ppid,comm,etime,pcpu,pmem = GNU style
 $ top = real time dynamic view of the process
   htop = interactive, more user friendly replacement of top with color views
+```
 # what surprised me
 - orphan process and zombie processes are seperate things
 - Linux uses Round Robin process scheduling by default
