@@ -1,6 +1,6 @@
 # Day 1 - Linux Basics
 ## What I did
--LinuxJourney: Grasshopper Section Compelete
+-LinuxJourney: Grasshopper and Journeyman Section Compelete
 -OverTheWire Bandit: Level 0-10 done
 
 ## Commands I learned
@@ -135,6 +135,46 @@ $ ps = displays currently running programs
   ps -o pid,ppid,comm,etime,pcpu,pmem = GNU style
 $ top = real time dynamic view of the process
   htop = interactive, more user friendly replacement of top with color views
+$ udevadm info --query=all --name=/dev/sda = to view udev & sysfs database
+$ lsusb = list usb devices
+  lsusb -t = for more structured view
+$ lspci = lists pci 
+$ lsscsi = lists all storage devices
+$ dd = converting & copying data
+  dd if=home/devops/file.txt of=/dev/sub bs=1024
+$ df = view file system
+  df -T = shows free space
+  df -i = checks how many inode(pointer to the file's data block) left.
+  df -h = human readable form
+$ du = checks disk usage
+  du -h = shows disk usage for each sub directory in your current location.
+$ fdisk  = manage partitions, not supported in GPT, need to enable gpt handling first.
+$ parted = partitiong disks, supports both MBR and GPT
+  gparted = graphical version of parted
+  Sudo parted -l = current layout of the partitions 
+$ gdisk = simillar to to fdisk, supports only GPT
+$ mkpart = create partitions
+$ resizepart = resize partitions
+$ mkfs = make file system
+$ fsck = file system check
+$ strace ls = view system calls a process makes in real time
+$ uname - = view installed kernel
+$ sudo apt dist -upgrade = upgrades kernel version
+$ lsmod = list the kernel modules
+$ sevice --status -all = overview of all the services(wrapper scripts) and their current status
+$ initctl = manage init services
+  initctl list = view job status
+  initctl star, stop, restrat job = manually controlling init jobs
+$ sudo initctl emit some_event = emit some startup events
+$ systemctl list-units = see all active units
+  systemctl status example service = checks units status
+  sudo systemctl start, stop, restart, enable, disable example service = manage units
+$ lsof = find out which user is holding the resources
+$ fuser = identifies which processes are using specific files
+$ uptime = quick health check
+$ iostat = provides cpu metrics and disk stats
+$ vmstat = memory util monitor, current status since last reboot
+$ nproc = number of available cpu's
 ```
 # what surprised me
 - orphan process and zombie processes are seperate things
