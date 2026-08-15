@@ -1,4 +1,4 @@
-# Day 1 - Linux Basics
+# Day 2 - Scripting Basics
 ## What I did
 - Ryan's Bash Tutorial: Completed and all exercises done
 - ShellCheck: Pasted scripts to catch bugs automatically
